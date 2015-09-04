@@ -9,6 +9,10 @@ public class DotCom {
     locationCells = loc;
   }
   
+  public ArrayList<String> locationCells() {
+    return locationCells;
+  }
+  
   public void setName(String n) {
     name = n;
   }

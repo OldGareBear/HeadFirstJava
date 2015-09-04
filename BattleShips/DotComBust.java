@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class DotComBust {
-  private GameHelper helper;
+  private GameHelper helper = new GameHelper();
   private ArrayList<DotCom> dotComList = new ArrayList<DotCom>();
   private int numOfGuesses = 0;
   
@@ -27,6 +27,12 @@ public class DotComBust {
   }
   
   private void startPlaying() {
+    for (DotCom dotCom: dotComList) {
+      for (String cell : dotCom.locationCells()) {
+        System.out.println(cell);
+      }
+    }
+    
     while (!dotComList.isEmpty()) {
       String userGuess = helper.getUserInput("Enter a guess");
       checkUserGuess(userGuess);
